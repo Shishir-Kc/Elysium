@@ -1,4 +1,3 @@
-from fastapi import FastAPI
 import aiosmtplib
 from email.message import EmailMessage
 
@@ -10,7 +9,6 @@ from Elysium_Config.Email.email_config import(
 )
 
 
-app = FastAPI()
 
 
 
