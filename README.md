@@ -202,9 +202,12 @@ Elysium/
 ```bash
 # Start Redis (required for Celery)
 redis-server
+And
+Valkey for ( Arch Linux )
+
 
 # Start Celery worker
-celery -A Elysium_Celery.config worker --loglevel=info
+PYTHONPATH=. celery -A Elysium_Celery.config worker --loglevel=info
 
 # Start FastAPI server
 uvicorn main:elysium_server --reload
