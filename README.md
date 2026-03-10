@@ -1,7 +1,6 @@
 # Elysium - Home Server
 
-Elysium is a FastAPI-based home server application that provides various services including server health monitoring, email automation, AI chat capabilities, and background task processing.
-
+Elysium is a FastAPI-based home server application that provides various services including server health monitoring, email automation, AI chat capabilities, and background task processing.fastapi
 ## Technology Stack
 
 - **Framework**: FastAPI
