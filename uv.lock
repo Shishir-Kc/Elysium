@@ -359,9 +359,10 @@ dependencies = [
     { name = "pyaudio" },
     { name = "redis" },
     { name = "requests" },
+    { name = "rich" },
     { name = "setuptools" },
     { name = "sounddevice" },
-    { name = "webrtcvad" },
+    { name = "typer" },
     { name = "webrtcvad-wheels" },
 ]
 
@@ -378,9 +379,10 @@ requires-dist = [
     { name = "pyaudio", specifier = ">=0.2.14" },
     { name = "redis", specifier = ">=7.2.1" },
     { name = "requests", specifier = ">=2.32.5" },
+    { name = "rich", specifier = ">=14.3.3" },
     { name = "setuptools", specifier = ">=82.0.1" },
     { name = "sounddevice", specifier = ">=0.5.5" },
-    { name = "webrtcvad", specifier = ">=2.0.10" },
+    { name = "typer", specifier = ">=0.24.1" },
     { name = "webrtcvad-wheels", specifier = ">=2.0.14" },
 ]
 
@@ -1952,12 +1954,6 @@ sdist = { url = "https://files.pythonhosted.org/packages/35/a2/8e3becb46433538a3
 wheels = [
     { url = "https://files.pythonhosted.org/packages/68/5a/199c59e0a824a3db2b89c5d2dade7ab5f9624dbf6448dc291b46d5ec94d3/wcwidth-0.6.0-py3-none-any.whl", hash = "sha256:1a3a1e510b553315f8e146c54764f4fb6264ffad731b3d78088cdb1478ffbdad", size = 94189, upload-time = "2026-02-06T19:19:39.646Z" },
 ]
-
-[[package]]
-name = "webrtcvad"
-version = "2.0.10"
-source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/89/34/e2de2d97f3288512b9ea56f92e7452f8207eb5a0096500badf9dfd48f5e6/webrtcvad-2.0.10.tar.gz", hash = "sha256:f1bed2fb25b63fb7b1a55d64090c993c9c9167b28485ae0bcdd81cf6ede96aea", size = 66156, upload-time = "2017-01-07T23:05:18.732Z" }
 
 [[package]]
 name = "webrtcvad-wheels"
