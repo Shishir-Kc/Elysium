@@ -224,3 +224,16 @@ SMTP_USER=your_email@example.com
 SMTP_PASS=your_password
 GROQ=your_groq_api_key
 ```
+## Run Docker Container 
+
+``` 
+This runs the container ! -  > docker run -d -p 8000:8000 --env-file ../.env --name elysium_server elysium
+
+This stops and removes the container -> docker stop elysium_server && docker rm elysium_server
+ 
+```
+
+
+
+
+
