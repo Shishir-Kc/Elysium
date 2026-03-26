@@ -85,3 +85,4 @@ with sd.RawInputStream(
             sd.sleep(100)
     except KeyboardInterrupt:
         print("\nStopped.")
+        
