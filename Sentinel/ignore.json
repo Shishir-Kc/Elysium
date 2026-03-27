@@ -1,5 +1,7 @@
 {
-  "git":".git",
-  "git_ignore":".gitignore",
-  "Elysium_backup":"Elysium_back_up"
+  "1":".git",
+  "2":".gitignore",
+  "3":"Elysium_back_up",
+  "4":"__pycache__",
+  "5":"Logs"
 }
