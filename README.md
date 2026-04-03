@@ -3,12 +3,19 @@
 Elysium is a FastAPI-based home server application that provides various services including server health monitoring, email automation, AI chat capabilities, and background task processing.fastapi
 ## Technology Stack
 
+### Backend
 - **Framework**: FastAPI
 - **Task Queue**: Celery with Redis
 - **AI**: LangChain with Groq integration
 - **Email**: aiosmtplib
 - **Async HTTP**: httpx
 - **Package Manager**: uv
+
+### Frontend
+- **Framework**: React 19
+- **Language**: TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
 
 ---
 
@@ -20,6 +27,22 @@ Elysium/
 ├── server_logging.py          # Server-wide logging configuration
 ├── pyproject.toml             # Project metadata and dependencies
 ├── requirements.txt           # Python dependencies
+│
+├── WEB/                       # React Frontend (UI)
+│   ├── src/                   # Source code
+│   │   ├── App.tsx            # Main React component
+│   │   ├── ChatPage.tsx       # AI Chat UI page
+│   │   ├── api/               # API client
+│   │   │   └── elysiumApi.ts  # Backend API integration
+│   │   ├── context/           # React Context
+│   │   │   └── NavigationContext.tsx  # Navigation state
+│   │   ├── index.css          # Global styles (Tailwind)
+│   │   └── main.tsx           # React entry point
+│   ├── dist/                  # Built static files
+│   ├── package.json           # Node dependencies
+│   ├── tailwind.config.js     # Tailwind configuration
+│   ├── vite.config.ts         # Vite configuration
+│   └── .env                   # Frontend environment variables
 │
 ├── api/
 │   └── v1/                    # API Version 1
@@ -181,6 +204,18 @@ Elysium/
 | `shutdown.txt` | Shutdown message |
 | `restarting.txt` | Restart message |
 
+### `WEB/` - Frontend (React UI)
+
+| File | Purpose |
+|------|---------|
+| `src/App.tsx` | Main React application component |
+| `src/ChatPage.tsx` | AI Chat interface page |
+| `src/api/elysiumApi.ts` | API client for backend communication |
+| `src/context/NavigationContext.tsx` | Navigation state management |
+| `src/index.css` | Global styles with Tailwind CSS |
+| `src/main.tsx` | React application entry point |
+| `dist/` | Built static files (production) |
+
 ---
 
 ## Code Flow
@@ -212,6 +247,8 @@ Elysium/
 
 ## Running the Server
 
+### Backend
+
 ```bash
 # Start Redis (required for Celery)
 redis-server
@@ -229,6 +266,20 @@ uv run uvicorn main:elysium_server --reload
 uv run Sentinel/watcher.py
 ```
 
+### Frontend
+
+```bash
+# Install dependencies
+cd WEB
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+```
+
 ---
 
 ## Environment Variables (.env)
@@ -241,15 +292,28 @@ SMTP_PASS=your_password
 GROQ=your_groq_api_key
 ```
 ## Run Docker Container 
-
+ 
 ``` 
 This runs the container ! -  > docker run -d -p 8000:8000 --env-file ../.env --name elysium_server elysium
 
 This stops and removes the container -> docker stop elysium_server && docker rm elysium_server
- 
+  
 ```
 
+---
 
+## Frontend-Backend Communication
 
+The React frontend communicates with the FastAPI backend via HTTP requests.
+
+| Frontend Endpoint | Backend Endpoint | Description |
+|------------------|------------------|-------------|
+| `GET /api/v1/health` | `GET /api/v1/health` | Server health status |
+| `POST /api/v1/chat/Agent` | `POST /api/v1/chat/Agent` | AI Chat with Groq |
+| `POST /api/v1/send/email` | `POST /api/v1/send/email` | Send email via Celery |
+
+Default backend URL: `http://localhost:8000`
+
+---
 
 
