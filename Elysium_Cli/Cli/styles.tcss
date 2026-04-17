@@ -1,0 +1,482 @@
+/* ═══════════════════════════════════════════════════════════════
+   Elysium TUI — Cyberpunk Home Agent Theme
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Global ─────────────────────────────────────────────────── */
+Screen {
+    background: #0a0e14;
+    color: #c5c8c6;
+}
+
+/* ── Header / Footer ────────────────────────────────────────── */
+Header {
+    background: #1a1e2e;
+    color: #b48ead;
+    dock: top;
+    height: 3;
+}
+
+Footer {
+    background: #1a1e2e;
+    color: #616e88;
+}
+
+/* ── Sidebar ────────────────────────────────────────────────── */
+#sidebar {
+    width: 28;
+    background: #0d1117;
+    border-right: thick #2e3440;
+    padding: 1 0;
+}
+
+#sidebar-title {
+    text-align: center;
+    color: #81a1c1;
+    text-style: bold;
+    padding: 1 2;
+}
+
+#nav-list {
+    padding: 0 1;
+}
+
+.nav-btn {
+    width: 100%;
+    margin: 0 0 0 0;
+    background: transparent;
+    color: #81a1c1;
+    border: none;
+    text-align: left;
+    padding: 0 2;
+    height: 3;
+}
+
+.nav-btn:hover {
+    background: #1e2a3a;
+    color: #88c0d0;
+}
+
+.nav-btn:focus {
+    background: #2e3a4a;
+    color: #8fbcbb;
+    text-style: bold;
+}
+
+.nav-btn.-active {
+    background: #1a2a3a;
+    color: #a3be8c;
+    text-style: bold;
+    border-left: thick #a3be8c;
+}
+
+/* ── Content Area ───────────────────────────────────────────── */
+#content {
+    padding: 1 2;
+}
+
+/* ── Dashboard Panels ───────────────────────────────────────── */
+.dashboard-grid {
+    layout: grid;
+    grid-size: 2 2;
+    grid-gutter: 1;
+    height: 100%;
+}
+
+.status-panel {
+    border: round #2e3440;
+    background: #0d1117;
+    padding: 1 2;
+    height: 100%;
+}
+
+.status-panel:hover {
+    border: round #4c566a;
+}
+
+.panel-title {
+    color: #81a1c1;
+    text-style: bold;
+    padding-bottom: 1;
+}
+
+.metric-value {
+    color: #a3be8c;
+    text-style: bold;
+}
+
+.metric-label {
+    color: #616e88;
+}
+
+/* Status indicators */
+.status-online {
+    color: #a3be8c;
+    text-style: bold;
+}
+
+.status-offline {
+    color: #bf616a;
+    text-style: bold;
+}
+
+.status-warning {
+    color: #ebcb8b;
+    text-style: bold;
+}
+
+/* ── Chat Panel ─────────────────────────────────────────────── */
+#chat-container {
+    height: 100%;
+}
+
+#chat-header {
+    height: auto;
+    layout: horizontal;
+    padding-bottom: 0;
+    margin-bottom: 1;
+}
+
+.panel-title-container {
+    width: 1fr;
+    height: auto;
+}
+
+#chat-header .panel-title {
+    width: 100%;
+    padding-bottom: 0;
+}
+
+#model-select {
+    width: 40;
+    height: auto;
+    margin-right: 2;
+}
+
+.chat-clear-btn {
+    width: 12;
+    height: 1;
+    min-width: 10;
+    margin: 1 0 0 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #bf616a;
+}
+
+.chat-clear-btn:hover {
+    background: #4a2e2e;
+    color: #d08770;
+}
+
+#chat-log {
+    height: 1fr;
+    border: round #2e3440;
+    background: #0d1117;
+    padding: 1;
+    scrollbar-color: #4c566a;
+    scrollbar-color-hover: #81a1c1;
+    scrollbar-color-active: #88c0d0;
+}
+
+.user-msg {
+    color: #81a1c1;
+    margin-bottom: 1;
+}
+
+.ai-msg {
+    color: #a3be8c;
+    margin-bottom: 1;
+}
+
+.system-msg {
+    color: #616e88;
+    text-style: italic;
+    margin-bottom: 1;
+    text-align: center;
+}
+
+#chat-input-bar {
+    dock: bottom;
+    height: 4;
+    layout: horizontal;
+    margin-top: 1;
+}
+
+#chat-input {
+    width: 1fr;
+    height: 4;
+    border: round #2e3440;
+    background: #0d1117;
+    color: #c5c8c6;
+}
+
+#chat-input:focus {
+    border: round #81a1c1;
+}
+
+#send-btn {
+    width: 12;
+    height: 4;
+    margin-left: 1;
+    background: #5e81ac;
+    color: #eceff4;
+    border: none;
+}
+
+#send-btn:hover {
+    background: #81a1c1;
+}
+
+/* ── Email Panel ────────────────────────────────────────────── */
+#email-container {
+    height: 100%;
+}
+
+.email-field {
+    margin-bottom: 1;
+}
+
+.email-field > Label {
+    color: #81a1c1;
+    margin-bottom: 0;
+}
+
+.email-field > Input {
+    border: round #2e3440;
+    background: #0d1117;
+    color: #c5c8c6;
+}
+
+.email-field > Input:focus {
+    border: round #81a1c1;
+}
+
+#email-body {
+    border: round #2e3440;
+    background: #0d1117;
+    color: #c5c8c6;
+    height: 1fr;
+}
+
+#email-body:focus {
+    border: round #81a1c1;
+}
+
+#send-email-btn {
+    dock: bottom;
+    margin-top: 1;
+    background: #a3be8c;
+    color: #0a0e14;
+    border: none;
+    width: 100%;
+    height: 3;
+}
+
+#send-email-btn:hover {
+    background: #8fbcbb;
+}
+
+/* ── Services Panel ─────────────────────────────────────────── */
+.svc-controls {
+    height: auto;
+    margin-bottom: 1;
+    padding: 0 0;
+}
+
+.svc-btn {
+    margin: 0 1 0 0;
+    min-width: 20;
+    height: 3;
+    border: none;
+}
+
+.svc-start {
+    background: #2e4a3a;
+    color: #a3be8c;
+}
+
+.svc-start:hover {
+    background: #3e5a4a;
+    color: #c8e6a0;
+    text-style: bold;
+}
+
+.svc-stop {
+    background: #4a2e2e;
+    color: #bf616a;
+}
+
+.svc-stop:hover {
+    background: #5a3e3e;
+    color: #d08770;
+    text-style: bold;
+}
+
+.svc-restart {
+    background: #4a3e2e;
+    color: #ebcb8b;
+}
+
+.svc-restart:hover {
+    background: #5a4e3e;
+    color: #f0d090;
+    text-style: bold;
+}
+
+#svc-status-bar {
+    padding: 0 1;
+    height: auto;
+}
+
+#svc-live-log {
+    height: 1fr;
+    min-height: 8;
+    border: round #2e3440;
+    background: #0d1117;
+    padding: 1;
+    scrollbar-color: #4c566a;
+}
+
+.service-card {
+    border: round #2e3440;
+    background: #0d1117;
+    padding: 1 2;
+    margin-bottom: 1;
+    height: auto;
+    layout: horizontal;
+}
+
+.service-card:hover {
+    border: round #4c566a;
+}
+
+.service-info {
+    width: 1fr;
+}
+
+.service-name {
+    color: #81a1c1;
+    text-style: bold;
+}
+
+.service-desc {
+    color: #616e88;
+}
+
+.service-status {
+    width: auto;
+    padding-left: 2;
+}
+
+/* ── Logs Panel ─────────────────────────────────────────────── */
+#logs-container {
+    height: 100%;
+}
+
+#log-output {
+    height: 1fr;
+    border: round #2e3440;
+    background: #0d1117;
+    padding: 1;
+    scrollbar-color: #4c566a;
+}
+
+.log-entry {
+    color: #616e88;
+}
+
+.log-info {
+    color: #81a1c1;
+}
+
+.log-warn {
+    color: #ebcb8b;
+}
+
+.log-error {
+    color: #bf616a;
+}
+
+/* ── ASCII Logo ─────────────────────────────────────────────── */
+#logo-display {
+    text-align: center;
+    color: #b48ead;
+    padding: 1;
+}
+
+/* ── DataTable styling ──────────────────────────────────────── */
+DataTable {
+    height: 1fr;
+    background: #0d1117;
+    scrollbar-color: #4c566a;
+}
+
+DataTable > .datatable--header {
+    background: #1a1e2e;
+    color: #81a1c1;
+    text-style: bold;
+}
+
+DataTable > .datatable--cursor {
+    background: #2e3a4a;
+    color: #eceff4;
+}
+
+/* ── Sparklines / Progress ──────────────────────────────────── */
+ProgressBar {
+    padding: 0 1;
+}
+
+ProgressBar Bar {
+    color: #a3be8c;
+    background: #2e3440;
+}
+
+ProgressBar PercentageStatus {
+    color: #81a1c1;
+    text-style: bold;
+}
+
+/* ── Toast / Notifications ──────────────────────────────────── */
+Toast {
+    background: #1a1e2e;
+    color: #eceff4;
+    border: round #4c566a;
+}
+
+/* ── Loading ────────────────────────────────────────────────── */
+LoadingIndicator {
+    color: #b48ead;
+}
+
+/* ── Scrollbar global ───────────────────────────────────────── */
+* {
+    scrollbar-size: 1 1;
+}
+
+/* ── Button base ────────────────────────────────────────────── */
+Button {
+    border: none;
+}
+
+Button:hover {
+    text-style: bold;
+}
+
+/* ── Tab / Content Switcher ─────────────────────────────────── */
+ContentSwitcher {
+    height: 1fr;
+}
+
+/* ── Horizontal Rule ────────────────────────────────────────── */
+Rule {
+    color: #2e3440;
+}
+
+/* ── RichLog ────────────────────────────────────────────────── */
+RichLog {
+    background: #0d1117;
+    border: round #2e3440;
+    padding: 1;
+    scrollbar-color: #4c566a;
+}

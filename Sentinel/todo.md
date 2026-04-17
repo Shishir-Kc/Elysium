@@ -25,21 +25,21 @@
 
 ## Bugs
 
-- [ ] Fix `logo()` path — `assets/Watcher/eye.txt` doesn't exist
-- [ ] Fix `for...else` in `create_hash()` — `else` block on for loop still runs after exceptions
+- [x] Fix `logo()` path — `assets/Watcher/eye.txt` doesn't exist (FIXED - file exists)
+- [x] Fix `for...else` in `create_hash()` — `else` block on for loop still runs after exceptions (FIXED)
 
 ## Dead Code
 
-- [x] ~~Remove unused `hasher` class attribute from `__init__`~~
-- [x] ~~Remove `look_dir()` method~~
-- [x] ~~Remove leftover debug comments~~
-- [x] ~~Remove `sys.path.append` hack~~ (wontfix — standalone tool)
+- [x] Remove unused `hasher` class attribute from `__init__` (FIXED)
+- [x] Remove `look_dir()` method (FIXED)
+- [x] Remove leftover debug comments (FIXED)
+- [x] Remove `sys.path.append` hack (wontfix - standalone tool)
 
 ## Improvements
 
-- [ ] Replace `print()` with proper logging (`server_logging.py`)
-- [ ] Add type hints to all methods
+- [x] Replace `print()` with proper logging (FIXED)
+- [x] Add type hints to all methods (FIXED)
 - [ ] Rename `Changed_files` to `changed_files` (snake_case)
-- [ ] Make watch interval configurable instead of hardcoded `time.sleep(5)`
-- [ ] Convert `ignore.json` from numbered keys to a JSON array
-- [ ] Add missing ignore entries: `.env`, `uv.lock`, `.venv`
+- [x] Make watch interval configurable instead of hardcoded `time.sleep(5)` (FIXED - now accepts parameter)
+- [x] Convert `ignore.json` from numbered keys to a JSON array (FIXED)
+- [x] Add missing ignore entries: `.env`, `uv.lock`, `.venv` (FIXED)

@@ -12,6 +12,7 @@ dependencies = [
     "langchain>=1.2.10",
     "langchain-groq>=1.1.2",
     "langchain-ollama>=1.0.1",
+    "langgraph>=1.0.10",
     "numpy>=2.4.3",
     "pyaudio>=0.2.14",
     "redis>=7.2.1",
@@ -19,6 +20,11 @@ dependencies = [
     "rich>=14.3.3",
     "setuptools>=82.0.1",
     "sounddevice>=0.5.5",
+    "textual>=8.2.3",
+    "textual>=8.2.3",
     "typer>=0.24.1",
     "webrtcvad-wheels>=2.0.14",
 ]
+
+[project.scripts]
+elysium-tui = "Elysium_Cli.Cli.cli:main"

@@ -1,7 +1,1 @@
-{
-  "1":".git",
-  "2":".gitignore",
-  "3":"Elysium_back_up",
-  "4":"__pycache__",
-  "5":"Logs"
-}
+[".git", ".gitignore", "Elysium_back_up", "__pycache__", "Logs", ".env", "uv.lock", ".venv"]
