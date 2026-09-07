@@ -18,6 +18,7 @@ dependencies = [
 ]
 
 [project.scripts]
+aria = "cli.main:main"
 
 [tool.uv.sources]
 kittentts = { git = "https://github.com/KittenML/KittenTTS.git", rev = "main" }

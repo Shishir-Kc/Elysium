@@ -1,4 +1,4 @@
-""" This file contains commands for A.R.I.A that are accessible by romeo. """
+""" This file contains commands for A.R.I.A that are accessible by aria. """
 
 import json
 from pathlib import Path

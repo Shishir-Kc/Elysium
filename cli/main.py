@@ -19,7 +19,7 @@ from cli.commands.info import (
 
 
 def build_parser(): 
-    parser = argparse.ArgumentParser(prog="romeo")
+    parser = argparse.ArgumentParser(prog="aria")
     subparser = parser.add_subparsers(dest="command")
 
     version_parser = subparser.add_parser("version",help="gets the current version of A.R.I.A")

@@ -100,7 +100,7 @@ sequenceDiagram
     participant Config as A.R.I.A config
     participant Linux as Linux system helper
 
-    User->>CLI: romeo info / status / ram-info
+    User->>CLI: aria info / status / ram-info
     CLI->>Cmd: parse command and call func(args)
     alt info or status
         Cmd->>Config: read local config JSON
