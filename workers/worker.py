@@ -1,7 +1,8 @@
+import os
 import threading
-from elysium_config.path_config import ELYSIUM_PATH
-import os 
 import uuid
+
+from elysium_config.path_config import ELYSIUM_PATH
 
 """
 

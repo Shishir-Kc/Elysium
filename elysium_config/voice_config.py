@@ -17,12 +17,12 @@ import os
 from pathlib import Path
 
 import requests
-from errors.errors import ConfigFileMissing
 from kittentts import KittenTTS
-from linux.system import Linux
-from logger_config import set_up_logger
 
 from elysium_config.path_config import read_json
+from errors.errors import ConfigFileMissing
+from linux.system import Linux
+from logger_config import set_up_logger
 
 logger = set_up_logger(name="ElysiumConfig.voice_config")
 

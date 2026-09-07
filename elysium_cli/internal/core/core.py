@@ -1,4 +1,4 @@
-from agents.nvidia import NvidiaAgent,Load_Agent
+from agents.nvidia import Load_Agent, NvidiaAgent
 from elysium_config.model_config import Elysium_Model_Config
 
 elconfig=Elysium_Model_Config()

@@ -1,6 +1,6 @@
 from openai import OpenAI
-from agents import Load_Agent
 
+from agents import Load_Agent
 
 agent = Load_Agent()
 

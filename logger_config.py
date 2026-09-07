@@ -1,7 +1,5 @@
 import logging
-
 from pathlib import Path
-
 
 """
 Note need the logger file will have an aditional filed called DEBUG

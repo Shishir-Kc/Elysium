@@ -1,13 +1,12 @@
 """ This files contains comamnds for E.L.Y.S.I.U.M that is accessable by romeo       """
 
+import json
 from pathlib import Path
 
 from elysium_config.path_config import show_elysium_paths
-import json
 from elysium_config.updater import Updater
 from linux.system import Linux
 from logger_config import set_up_logger
-
 
 logger = set_up_logger(name="Commands.elysium_info")
 

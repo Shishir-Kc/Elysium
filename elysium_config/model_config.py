@@ -11,6 +11,8 @@ import logging
 import os
 
 import requests
+
+from elysium_config.path_config import ELYSIUM_PATH
 from errors.errors import (
     ApiKeyNotGiven,
     ConfigFileMissing,
@@ -19,8 +21,6 @@ from errors.errors import (
     ProviderNotGiven,
 )
 from security.encryption.crypto import decrypt, encrypt, generate_key, getkey
-
-from elysium_config.path_config import ELYSIUM_PATH
 
 BASEDIR = f"{ELYSIUM_PATH}/Config/Model/"
 LOGDIR = f"{ELYSIUM_PATH}/Logs/Model"

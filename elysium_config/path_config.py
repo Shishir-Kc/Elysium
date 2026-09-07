@@ -9,6 +9,7 @@ import os
 from pathlib import Path
 
 import requests
+
 from logger_config import set_up_logger
 
 BASEDIR = Path(__file__).parent

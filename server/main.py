@@ -1,12 +1,12 @@
-from fastapi import (FastAPI,status,
-                    WebSocket,WebSocketDisconnect)
-from fastapi.responses import StreamingResponse
-from contextlib import asynccontextmanager
 import asyncio
+import logging
+import os
+from contextlib import asynccontextmanager
 from pathlib import Path
-import logging 
-import os 
- 
+
+from fastapi import FastAPI, WebSocket, WebSocketDisconnect, status
+from fastapi.responses import StreamingResponse
+
 testdir = Path.home() / ".config"/"E.L.Y.S.I.U.M"/"Logs"/"Server"/ "server.log"
 
 

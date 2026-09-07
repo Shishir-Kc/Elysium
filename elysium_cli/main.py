@@ -2,13 +2,21 @@
 """ This file will be the reason for the Cli commands ! """
 
 import argparse
+
 from elysium_cli.commands.elysium_info import (
-    version , status ,
-    last_development_changes , version_name ,
-    is_stable , elysium_info , check_version  ,
-    update , ram_info , cache_info , 
-    remove_cache
+    cache_info,
+    check_version,
+    elysium_info,
+    is_stable,
+    last_development_changes,
+    ram_info,
+    remove_cache,
+    status,
+    update,
+    version,
+    version_name,
 )
+
 
 def build_parser(): 
     parser = argparse.ArgumentParser(prog="romeo")

@@ -1,7 +1,8 @@
-from elysium_config.model_config import Elysium_Model_Config as EMC 
+import random
+
+from elysium_config.model_config import Elysium_Model_Config as EMC
 from errors.errors import ProviderNotFound
 
-import random
 
 class Load_Agent:
   def __init__(self):
