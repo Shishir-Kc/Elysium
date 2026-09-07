@@ -1,10 +1,10 @@
-# Elysium_Cli
+# A.R.I.A CLI
 
-A Python-based command-line interface application for the Elysium project, designed to be AI-powered and agentic.
+A Python-based command-line interface application for the A.R.I.A project, designed to be AI-powered and agentic.
 
 ## Current State
 
-Elysium_Cli is in early development stage, providing a basic interactive CLI framework with a configurable model backend.
+A.R.I.A CLI is in early development, providing a basic interactive CLI framework with a configurable model backend.
 
 ## Features
 
@@ -26,7 +26,7 @@ python main.py
 ## Project Structure
 
 ```
-Elysium_Cli/
+cli/
 ├── main.py                    # Entry point
 ├── Config/                    # Configuration management
 │   ├── cli_config.py          # CLI config with Pydantic validation & encryption
@@ -54,7 +54,7 @@ Elysium_Cli/
 
 - `pydantic` - Configuration schema validation
 - `requests` - HTTP requests for default config download
-- `Elysium_Config` - Shared Elysium path configuration
+- `config` - Shared A.R.I.A path configuration
 - `Security.encryption.crypto` - API key encryption
 
 ## Future Plans

@@ -19,15 +19,15 @@ from pathlib import Path
 import requests
 from kittentts import KittenTTS
 
-from elysium_config.path_config import read_json
+from config.path_config import read_json
 from errors.errors import ConfigFileMissing
 from linux.system import Linux
 from logger_config import set_up_logger
 
-logger = set_up_logger(name="ElysiumConfig.voice_config")
+logger = set_up_logger(name="Config.voice_config")
 
 HOME = Path.home()
-CONFIGPATH = Path.home() / ".config/E.L.Y.S.I.U.M/Config/Model"
+CONFIGPATH = Path.home() / ".config/A.R.I.A/Config/Model"
 os.makedirs(CONFIGPATH,exist_ok=True)
 
 class VoiceConfig:
@@ -55,7 +55,7 @@ class VoiceConfig:
         """ 
         
         This method will download voice model configs from the pre-determined config path 
-        the config file will be stored in .config/E.L.Y.S.I.U.M/Config/Model
+        the config file will be stored in .config/A.R.I.A/Config/Model
      
         """
         try:

@@ -1,0 +1,22 @@
+{
+  "aria_paths": {
+    "Root_path": ".config/A.R.I.A",
+    "Log_path": ".config/A.R.I.A/Logs",
+    "Skill_path": ".config/A.R.I.A/SKills",
+    "Memory_path": ".config/A.R.I.A/Memory",
+    "Config_path": ".config/A.R.I.A/Config"
+  },
+  "aria_additionals_paths": {
+    "Root_path": ".config/A.R.I.A/Additionals",
+    "Memory": ".config/A.R.I.A/Additionals/Memory"
+  },
+  "additionals_config": {
+    "Config_path": ".config/A.R.I.A/Additionals/config.json"
+  },
+  "aria": {
+    "config": "ARIAConfig/config.json"
+  },
+  "voice": {
+    "path": ".config//A.R.I.A/Config/Voice"
+  }
+}

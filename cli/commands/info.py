@@ -1,26 +1,26 @@
-""" This files contains comamnds for E.L.Y.S.I.U.M that is accessable by romeo       """
+""" This file contains commands for A.R.I.A that are accessible by romeo. """
 
 import json
 from pathlib import Path
 
-from elysium_config.path_config import show_elysium_paths
-from elysium_config.updater import Updater
+from config.path_config import show_aria_paths
+from config.updater import Updater
 from linux.system import Linux
 from logger_config import set_up_logger
 
-logger = set_up_logger(name="Commands.elysium_info")
+logger = set_up_logger(name="Commands.info")
 
 linux = Linux()
 
 HOMEDIR = Path.home()
-configdata = show_elysium_paths(all=True).get("elysium",{})
-configpath = HOMEDIR/ ".E.L.Y.S.I.U.M"/ configdata.get("config",{})
+configdata = show_aria_paths(all=True).get("aria",{})
+configpath = HOMEDIR/ ".A.R.I.A"/ configdata.get("config",{})
 
 
 def readconfig():
     with open(configpath,"r") as file:
         data = json.load(file)
-    return data.get("elysium",{})
+    return data.get("aria",{})
 
 
 
@@ -49,7 +49,7 @@ def is_stable(args=None):
     return stable
 
 
-def elysium_info(args=None):
+def aria_info(args=None):
     print(f""" 
     
     Version : {version()},
@@ -67,7 +67,7 @@ def check_version(args=None):
 
 def update(args:None):
    el_updater = Updater()
-   el_updater.update_elysium()
+   el_updater.update_aria()
 
 def ram_info(args:None):
     info:dict = dict(linux.show_ram_info())

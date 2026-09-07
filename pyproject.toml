@@ -1,5 +1,5 @@
 [project]
-name = "elysium"
+name = "aria"
 version = "0.0.8"
 description = "Home_server"
 readme = "README.md"
@@ -21,4 +21,3 @@ dependencies = [
 
 [tool.uv.sources]
 kittentts = { git = "https://github.com/KittenML/KittenTTS.git", rev = "main" }
-

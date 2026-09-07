@@ -1,7 +1,7 @@
 from agents.nvidia import Load_Agent, NvidiaAgent
-from elysium_config.model_config import Elysium_Model_Config
+from config.model_config import Model_Config
 
-elconfig=Elysium_Model_Config()
+elconfig=Model_Config()
 
 
 class Cli:

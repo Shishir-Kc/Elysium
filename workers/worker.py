@@ -2,7 +2,7 @@ import os
 import threading
 import uuid
 
-from elysium_config.path_config import ELYSIUM_PATH
+from config.path_config import ARIA_PATH
 
 """
 
@@ -14,8 +14,8 @@ the worker will be worked on next month
 """
 
 
-worker_path = f"{ELYSIUM_PATH}/Config/worker"
-worker_log = f"{ELYSIUM_PATH}/Logs/worker"
+worker_path = f"{ARIA_PATH}/Config/worker"
+worker_log = f"{ARIA_PATH}/Logs/worker"
 
 paths = [worker_path,worker_log]
 for path in paths:

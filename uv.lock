@@ -307,7 +307,7 @@ wheels = [
 ]
 
 [[package]]
-name = "elysium"
+name = "aria"
 version = "0.0.8"
 source = { virtual = "." }
 dependencies = [

@@ -12,7 +12,7 @@ import os
 
 import requests
 
-from elysium_config.path_config import ELYSIUM_PATH
+from config.path_config import ARIA_PATH
 from errors.errors import (
     ApiKeyNotGiven,
     ConfigFileMissing,
@@ -22,15 +22,15 @@ from errors.errors import (
 )
 from security.encryption.crypto import decrypt, encrypt, generate_key, getkey
 
-BASEDIR = f"{ELYSIUM_PATH}/Config/Model/"
-LOGDIR = f"{ELYSIUM_PATH}/Logs/Model"
+BASEDIR = f"{ARIA_PATH}/Config/Model/"
+LOGDIR = f"{ARIA_PATH}/Logs/Model"
 
 paths=[BASEDIR,LOGDIR]
 
 for path in paths:
     os.makedirs(path,exist_ok=True)
 
-logger=logging.getLogger("Elysium_config.model_config")
+logger=logging.getLogger("Config.model_config")
 
 logging.basicConfig(
     level=logging.DEBUG,
@@ -40,7 +40,7 @@ logging.basicConfig(
     ]
 )
 
-class Elysium_Model_Config:
+class Model_Config:
     def __init__(self) -> None:
         self.config_name = "model_config.json"  
         self.default_config_url="https://raw.githubusercontent.com/Shishir-Kc/Elysium_additionals/main/Configs/Elysium_config/model_config.json" 
@@ -180,6 +180,6 @@ class Elysium_Model_Config:
             }
  
 if __name__ == "__main__":    
-    el = Elysium_Model_Config()
+    el = Model_Config()
     el.cli_flags()
     print("Use -h for more info ")

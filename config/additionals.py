@@ -1,6 +1,6 @@
 """
 This file contains code for doewnloading config / checking config  version / updating config 
-Mainly the config is for E.L.Y.S.I.U.M Additionals (  ' plug and play ' ) architecture .
+Mainly the config is for A.R.I.A Additionals (  ' plug and play ' ) architecture .
 Furter more EL can automatically / independently call these methods / function as tools ,
 so it can decide when to update .
 The additionals code is in sepereate repo of the developer called Elysium_additionals 
@@ -27,14 +27,14 @@ from errors.errors import (
 
 from .path_config import (
     BASEDIR,
-    check_for_eLysium_path,
+    check_for_aria_path,
     download_config,
-    show_elysium_paths,
+    show_aria_paths,
 )
 
-logger = logging.getLogger('ElysiumConfig.download_a1dditionals')
+logger = logging.getLogger('Config.download_additionals')
 
-CONFIGPATH = f"{BASEDIR}/config.json" # Path for config.json of ElysiumConfig
+CONFIGPATH = f"{BASEDIR}/config.json" # Path for config.json of the shared config package
 HOMEDIR = Path.home()
 
 logging.basicConfig(
@@ -61,11 +61,11 @@ def load_additiosnals_config():
 
 logger.info("Getting ADDITIONALSROOTPATH")
 load_config = load_additiosnals_config()
-config = load_config.get('elysium_additionals_config',{})
+config = load_config.get('aria_additionals_config',{})
 if not config:
     raise ConfigFileMissing
-all_paths = show_elysium_paths(all=True)
-additionals_paths = all_paths.get('elysium_additionals_paths',{})
+all_paths = show_aria_paths(all=True)
+additionals_paths = all_paths.get('aria_additionals_paths',{})
 additionals_root = additionals_paths.get('Root_path',{})
 
 ADDITIONALSROOTPATH = f"{HOMEDIR}/{additionals_root}"
@@ -105,7 +105,7 @@ ADDITIONALSSETTING = f"{ADDITIONALSROOTPATH}/settings.json"
 
 
 logger.info("Checking additionals path")
-if not check_for_eLysium_path(path=""):
+if not check_for_aria_path(path=""):
     os.makedirs("asd",exist_ok=True)
 
 class Additionals:

@@ -7,7 +7,7 @@ from pathlib import Path
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect, status
 from fastapi.responses import StreamingResponse
 
-testdir = Path.home() / ".config"/"E.L.Y.S.I.U.M"/"Logs"/"Server"/ "server.log"
+testdir = Path.home() / ".config"/"A.R.I.A"/"Logs"/"Server"/ "server.log"
 
 
 logger = logging.getLogger("uvicorn.error")
@@ -21,10 +21,10 @@ logger.addHandler(filehandlar)
 
 @asynccontextmanager
 async def lifespan(server:FastAPI):
-    logger.info("Booting E.L.Y.S.I.U.M FastAPI Server ")
+    logger.info("Booting A.R.I.A FastAPI Server ")
     yield
 
-server = FastAPI(title="E.L.Y.S.I.U.M",lifespan=lifespan)
+server = FastAPI(title="A.R.I.A",lifespan=lifespan)
 
 @server.get("/")
 async def base():

@@ -1,5 +1,5 @@
 """
-This file is responsible for updating and checking E.L.Y.S.I.U.M version . 
+This file is responsible for updating and checking A.R.I.A version.
 Agent can auto update at their will or when user prompts it
 neither the less check updated methoid will run every instance 
 
@@ -15,7 +15,7 @@ from pathlib import Path
 
 import requests
 
-logger = logging.getLogger("ElysiumConfig.updater")
+logger = logging.getLogger("Config.updater")
 
 logging.basicConfig(
     level=logging.DEBUG,
@@ -30,8 +30,8 @@ def converson(v):
 
 class Updater:
     def __init__(self) -> None: 
-        self.ELYSIUM_ROOT = Path.home() / ".E.L.Y.S.I.U.M"
-        self.LOCALCONFIG = Path.home() / ".E.L.Y.S.I.U.M/ElysiumConfig/config.json"
+        self.ARIA_ROOT = Path.home() / ".A.R.I.A"
+        self.LOCALCONFIG = Path.home() / ".A.R.I.A/ARIAConfig/config.json"
         self.CLOUDCONFIG =  self._get_cloud_config()
 
     def _read_local_config(self):
@@ -45,7 +45,7 @@ class Updater:
       logger.info("Getting Cloud Config") 
       try:
            localconfig = self._read_local_config()
-           metadata = localconfig.get("elysium",{})      
+           metadata = localconfig.get("aria",{})
            config_url = metadata.get("url","")
            logger.info("Capturing Cloud Config")
            try:
@@ -62,8 +62,8 @@ class Updater:
        updates = {} 
        Localconfig = self._read_local_config()
        CloudConfig = self._get_cloud_config()
-       LocalMetadata = Localconfig.get("elysium",{})
-       CloudMetadata = CloudConfig.get("elysium",{})
+       LocalMetadata = Localconfig.get("aria",{})
+       CloudMetadata = CloudConfig.get("aria",{})
        if converson(LocalMetadata['version']) < converson(CloudMetadata['version']):
             logger.info("Update is Available")
             updates["version"] = CloudMetadata['version']
@@ -81,9 +81,9 @@ class Updater:
             logger.info("No update available ")
             return updates
 
-    def update_elysium(self):
+    def update_aria(self):
         """ 
-        This method will download and update E.L.Y.S.I.U.M automatically
+        This method will download and update A.R.I.A automatically
         if it detects new version ! 
         1) It will delete the old version
         2) clones the new version from master branch
@@ -96,14 +96,14 @@ class Updater:
         if not update_metadata:
             logger.info("No Updates Found")
             return update_metadata
-        if not os.path.exists(self.ELYSIUM_ROOT):
-            logger.info("E.L.Y.S.I.U.M Is Not Installed ")
-            raise Exception ("E.L.Y.S.I.U.M Does Not Exists ")
+        if not os.path.exists(self.ARIA_ROOT):
+            logger.info("A.R.I.A Is Not Installed ")
+            raise Exception ("A.R.I.A Does Not Exists ")
         logger.warning("Deleting Old version")
         homedir = os.path.expanduser("~")
         os.chdir(homedir)
         try:
-            for entry in os.scandir(self.ELYSIUM_ROOT):
+            for entry in os.scandir(self.ARIA_ROOT):
              if entry.is_dir(follow_symlinks=False):
                 shutil.rmtree(entry.path)
              else:
@@ -113,12 +113,11 @@ class Updater:
             logger.error(f"Some Error Occured While Deleting Old Versio {e}")
         try:
             logger.info("Downloading Update")
-            subprocess.run(['git','clone',update_metadata['repo'],self.ELYSIUM_ROOT],check=True) 
+            subprocess.run(['git','clone',update_metadata['repo'],self.ARIA_ROOT],check=True)
         except Exception as e:
             logger.error(f"Something Went Wrong while updating{e}")
         logger.info("Update Downloaded")
         logger.info("Syncing UP ")
-        os.chdir(self.ELYSIUM_ROOT)
+        os.chdir(self.ARIA_ROOT)
         subprocess.run(['uv','sync'],check=True)
         logger.info("Sync Process Completed ")
-

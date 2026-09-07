@@ -1,7 +1,7 @@
 """
  its logs will be under .config/Elysim/logs/cli
 
- where ELYSIUM_PATH -> $HOME/.config/Elysium/
+ where ARIA_PATH -> $HOME/.config/A.R.I.A/
 
 """
 
@@ -14,12 +14,12 @@ import os
 import requests
 from pydantic import BaseModel
 
-from elysium_cli.internal import ConfigNotFound, InvalidArgsFound
-from elysium_config.path_config import BASEDIR, ELYSIUM_PATH
+from cli.internal import ConfigNotFound, InvalidArgsFound
+from config.path_config import BASEDIR, ARIA_PATH
 from security.encryption.crypto import encrypt, generate_key
 
-LOGDIR = f"{ELYSIUM_PATH}/Logs/cli"
-BASEDIR = f"{ELYSIUM_PATH}/Config/cli"
+LOGDIR = f"{ARIA_PATH}/Logs/cli"
+BASEDIR = f"{ARIA_PATH}/Config/cli"
 paths = [BASEDIR,LOGDIR]
 
 
@@ -29,7 +29,7 @@ for path in paths:
     """
     os.makedirs(path,exist_ok=True)
 
-logger = logging.getLogger("Elysium.Cli.Config.cli_config")
+logger = logging.getLogger("A.R.I.A.Cli.Config.cli_config")
 
 def logs(debug: bool = False):
     try:

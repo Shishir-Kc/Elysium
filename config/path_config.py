@@ -14,24 +14,24 @@ from logger_config import set_up_logger
 
 BASEDIR = Path(__file__).parent
 GENERAL_CONFIG_PATH = f"{BASEDIR}/path_config.json"
-logger = set_up_logger(name="ElysiumConfig.path_config")
+logger = set_up_logger(name="Config.path_config")
 
-def get_elysium_path(of:str=""):
+def get_aria_path(of:str=""):
     with open(GENERAL_CONFIG_PATH,"r") as data:        
         config = json.load(data)
-    elysium_path = config.get("elysium_paths",{})
-    return elysium_path.get(of)
+    aria_paths = config.get("aria_paths",{})
+    return aria_paths.get(of)
 
 
-ELYSIUM_PATH= f"{Path.home()}/{get_elysium_path(of="Root_path")}"
+ARIA_PATH = f"{Path.home()}/{get_aria_path(of="Root_path")}" 
 
 
-def check_for_eLysium_path(path:str="")-> bool:
-    elysium_path = path
+def check_for_aria_path(path:str="")-> bool:
+    aria_path = path
     if not path:
-        elysium_path = ELYSIUM_PATH    
+        aria_path = ARIA_PATH
     try:
-        if os.path.exists(elysium_path):
+        if os.path.exists(aria_path):
             return True
         else:
             return False
@@ -39,13 +39,13 @@ def check_for_eLysium_path(path:str="")-> bool:
         print(e)
         return False
 
-def show_elysium_paths(all:bool=False)->dict:
+def show_aria_paths(all:bool=False)->dict:
     paths = {}
     with open(GENERAL_CONFIG_PATH,"r") as file:
         data = json.load(file)
-    elysium_paths = data
+    aria_paths = data
     if not all:
-        for i ,path_name in enumerate(elysium_paths,start=1):
+        for i ,path_name in enumerate(aria_paths,start=1):
          paths[i] = path_name
         return paths
     return data

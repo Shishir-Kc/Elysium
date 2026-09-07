@@ -12,11 +12,11 @@ from datetime import datetime
 
 from cryptography.fernet import Fernet
 
-from elysium_config.path_config import ELYSIUM_PATH
+from config.path_config import ARIA_PATH
 from errors.errors import KeysNotFound
 
-ENCRYPTION_KEYS_PATH = f"{ELYSIUM_PATH}/Config/Security/encryption"
-ENCRYPTION_KEYS_LOG_PATH = f"{ELYSIUM_PATH}/Logs/Security/encryption"
+ENCRYPTION_KEYS_PATH = f"{ARIA_PATH}/Config/Security/encryption"
+ENCRYPTION_KEYS_LOG_PATH = f"{ARIA_PATH}/Logs/Security/encryption"
 KEYS_PATH  = f"{ENCRYPTION_KEYS_PATH}/keys.json"
 paths = [ENCRYPTION_KEYS_PATH,ENCRYPTION_KEYS_LOG_PATH]
 for path in paths:
